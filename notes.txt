@@ -1,6 +1,0 @@
-1122/3000 tweets were not retweets
-
-Idea: interactively tag tweets as:indicating:
-- a positive or negative opinion about the referendum OR
-- a positive or negative intention to vote YES
-- an exit-poll type record of actual voting behaviour
