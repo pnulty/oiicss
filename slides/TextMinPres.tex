@@ -11,7 +11,7 @@
 %\mode<beamer>{\usetheme{Boadilla}}
 
 \usepackage{hyperref}
- \title[Retrieving and Parsing Linguistic Expressions of Political Attitudes]{Retrieving Linguistic Expressions of Political Attitudes}
+ \title[Retrieving and Parsing Linguistic Expressions of Political Attitudes]{Retrieving and Parsing Linguistic Expressions of Political Attitudes}
 \author{Paul Nulty}
 \institute % (optional)
 {
@@ -90,6 +90,22 @@
 
 \begin{frame}
   \frametitle{Log-Log Rank frequency}
+
+    \includegraphics[scale=0.20]{zipf2}
+  \scriptsize
+  Data from 260,619 tweets (excluding retweets, 1.02M total), from twitter `gardenhose' api on Scottish referendum day, containing any of these terms: \texttt{["\#indyref", "salmond", "cameron", "scotland", "scottish", "referendum", "vote", "voted", "voting"]}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Rank frequency of hashtags}
+
+    \includegraphics[scale=0.20]{hash1}
+  \scriptsize
+  Data from 260,619 tweets (no retweets), from twitter `gardenhose' api on Scottish referendum day, containing any of these terms: \texttt{["\#indyref", "salmond", "cameron", "scotland", "scottish", "referendum", "vote", "voted", "voting"]}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Log-Log Rank frequencyof hashtags}
 
     \includegraphics[scale=0.20]{zipf2}
   \scriptsize
@@ -180,7 +196,18 @@ stay           &     no    &      8.9 \: 1.0 \\
   \begin{itemize}
   \item 800 most common terms
   \item removed labelled terms
-  \item predicted 2028 \/ 2630 correctly (77\%)
+  \item predicted 1866 out of 2367 tweets correctly (79\%)
+  \end{itemize}
+\end{frame}
+
+
+\begin{frame}
+  \frametitle{Structured Natural language processing}
+  \begin{itemize}
+  \item Recent methods in NLP have moved beyond bag-of-words model
+  \item Named entity recognition, co-reference resolution, 
+  \item Typed dependency parsing
+  \item Detect specific expressions rather than term mentions
   \end{itemize}
 \end{frame}
 

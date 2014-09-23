@@ -12,8 +12,8 @@ print("opened.")
 print(len(data))
 
 #%%
-
-data = data[0:20000]
+data.shuffle()
+data = data[0:3000]
 
 all_toks = []
 vocab_dict = {}
@@ -43,16 +43,11 @@ test_cases = []
 test_labels = []
 yescount = 0
 i=0
-for d in data[0:20000]:
+for d in data:
     i+=1
     if i % 1000==0: print i
     this_features = {w:0.0 for w in word_types}
     this_label = d[5]
-    if this_label == 'yes':
-        yescount+=1
-        if yescount > 6000:
-            continue
-
    # if this_label=="unk": continue
     #print(this_label)
     for f in this_features:
@@ -79,7 +74,9 @@ for j in range(0, len(test_cases)):
         corr += 1
     if test_labels[j]=='no':
         nc+=1
-print classifier.show_most_informative_features(10)
+print classifier.show_most_informative_features(60)
 print corr
 print nc
+print(len(train_cases))
+print(len(test_cases))
 
