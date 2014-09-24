@@ -34,7 +34,7 @@ with codecs.open('/home/paul/backup/2014-09-18.json','r',encoding='utf8') as f:
 
             if ('hashsymbnothanks' in text.lower() or 'hashsymbbettertogether' in text.lower()):
                 vote = "no"
-            if ('hashsymbvoteyes' in text.lower() or 'yesscotland' in text.lower()):
+            if ('hashsymbvoteyes' in text.lower() or 'hashsymbyesscotland' in text.lower()):
                 if vote == "no":
                     vote = "unk"
                 else:
